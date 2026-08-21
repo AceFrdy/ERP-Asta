@@ -119,14 +119,14 @@ const Header = () => {
     const token = localStorage.getItem('accessToken') ?? '';
     const storedId = localStorage.getItem('id');
 
-    const [email, setEmail] = useState('admin@suryakencana.com');
+    const [email, setEmail] = useState('admin@asta.com');
     const [username, setUsername] = useState('admin');
-    const [name, setName] = useState('Admin Surya Kencana');
+    const [name, setName] = useState('Admin Asta');
 
     const handleFetch = () => {
-        setEmail('admin@suryakencana.com');
+        setEmail('admin@asta.com');
         setUsername('admin');
-        setName('Admin Surya Kencana');
+        setName('Admin Asta');
     };
 
     const handleSignOut = async () => {
@@ -147,7 +147,7 @@ const Header = () => {
                         <Link to="/" className="main-logo flex items-center shrink-0">
                             {/* <img className="w-8 ltr:-ml-1 rtl:-mr-1 inline" src="/assets/images/logo.svg" alt="logo" /> */}
                             <span className="text-2xl ltr:ml-1.5 rtl:mr-1.5  font-semibold  align-middle hidden md:inline dark:text-white-light transition-all duration-300 hover:text-primary">
-                                ERP Sinar Kencana
+                                ERP Asta
                             </span>
                         </Link>
                         <button

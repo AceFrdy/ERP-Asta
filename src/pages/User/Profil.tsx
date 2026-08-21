@@ -10,18 +10,18 @@ const Profile = () => {
     const token = localStorage.getItem('accessToken') ?? '';
     const storedId = localStorage.getItem('id');
 
-    const [email, setEmail] = useState('admin@suryakencana.com');
-    const [username, setUsername] = useState('admin_sk');
-    const [name, setName] = useState('Admin Surya Kencana');
+    const [email, setEmail] = useState('admin@asta.com');
+    const [username, setUsername] = useState('admin_asta');
+    const [name, setName] = useState('Admin Asta');
     const [contact, setContact] = useState('081234567890');
-    const [address, setAddress] = useState('Jl. Surya Kencana No. 1, Jakarta');
+    const [address, setAddress] = useState('Jl. Yogyakarta No. 1, ');
 
     const handleFetch = () => {
-        setEmail('admin@suryakencana.com');
-        setUsername('admin_sk');
-        setName('Admin Surya Kencana');
+        setEmail('admin@asta.com');
+        setUsername('admin_asta');
+        setName('Admin Asta');
         setContact('081234567890');
-        setAddress('Jl. Surya Kencana No. 1, Jakarta');
+        setAddress('Jl. Yogyakarta no 1');
     };
 
     useEffect(() => {
