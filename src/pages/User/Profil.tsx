@@ -10,33 +10,18 @@ const Profile = () => {
     const token = localStorage.getItem('accessToken') ?? '';
     const storedId = localStorage.getItem('id');
 
-    const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
-    const [name, setName] = useState('');
-    const [contact, setContact] = useState('');
-    const [address, setAddress] = useState('');
+    const [email, setEmail] = useState('admin@suryakencana.com');
+    const [username, setUsername] = useState('admin_sk');
+    const [name, setName] = useState('Admin Surya Kencana');
+    const [contact, setContact] = useState('081234567890');
+    const [address, setAddress] = useState('Jl. Surya Kencana No. 1, Jakarta');
 
     const handleFetch = () => {
-        if (token && storedId) {
-            axios
-                .get(`${endpoint}/api/users/${storedId}`, {
-                    headers: {
-                        Accept: 'application/json',
-                        Authorization: `Bearer ${token}`,
-                    },
-                })
-                .then((response) => {
-                    const userData = response.data.data.resource;
-                    setEmail(userData.email);
-                    setUsername(userData.username);
-                    setName(userData.name);
-                    setContact(userData.contact);
-                    setAddress(userData.address);
-                })
-                .catch((error) => {
-                    console.error('Error fetching user data profil:', error);
-                });
-        }
+        setEmail('admin@suryakencana.com');
+        setUsername('admin_sk');
+        setName('Admin Surya Kencana');
+        setContact('081234567890');
+        setAddress('Jl. Surya Kencana No. 1, Jakarta');
     };
 
     useEffect(() => {

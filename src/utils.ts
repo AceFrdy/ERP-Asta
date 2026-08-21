@@ -87,6 +87,7 @@ export interface TotalSales {
     total_sales: number;
     revenue: number;
     total_customers: number;
+    total_employers: number;
 }
 
 export const endpoint = 'https://api-erp.my.id';

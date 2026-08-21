@@ -17,8 +17,8 @@ const Login = () => {
     const navigate = useNavigate();
 
     const [credentials, setCredentials] = useState({
-        email: '',
-        password: '',
+        email: 'admin@suryakencana.com',
+        password: 'password123',
     });
 
     const [errorMessages, setErrorMessages] = useState({
@@ -62,22 +62,10 @@ const Login = () => {
             return;
         }
 
-        axios
-            .post(`${endpoint}/api/login`, credentials)
-            .then((response) => {
-                if (response.data.data.status) {
-                    localStorage.setItem('accessToken', response.data.data.resource.token);
-                    localStorage.setItem('id', response.data.data.resource.id);
-                    navigate('/');
-                }
-            })
-            .catch((error) => {
-                if (error.response && error.response.status === 401) {
-                    toast.error('Email or Password invalid, Please try again');
-                } else {
-                    toast.error('Something went wrong');
-                }
-            });
+        localStorage.setItem('accessToken', 'portfolio-demo-token');
+        localStorage.setItem('id', '1');
+        toast.success('Login berhasil! (Portfolio Mode)');
+        navigate('/');
     };
 
     return (

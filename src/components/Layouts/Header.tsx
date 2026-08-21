@@ -119,47 +119,20 @@ const Header = () => {
     const token = localStorage.getItem('accessToken') ?? '';
     const storedId = localStorage.getItem('id');
 
-    const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
-    const [name, setName] = useState('');
+    const [email, setEmail] = useState('admin@suryakencana.com');
+    const [username, setUsername] = useState('admin');
+    const [name, setName] = useState('Admin Surya Kencana');
 
     const handleFetch = () => {
-        if (token && storedId) {
-            axios
-                .get(`${endpoint}/api/users/${storedId}`, {
-                    headers: {
-                        Accept: 'application/json',
-                        Authorization: `Bearer ${token}`,
-                    },
-                })
-                .then((response) => {
-                    const userData = response.data.data.resource;
-                    setEmail(userData.email);
-                    setUsername(userData.username);
-                    setName(userData.name);
-                })
-                .catch((error) => {
-                    console.error('Error fetching user data profil:', error);
-                });
-        }
+        setEmail('admin@suryakencana.com');
+        setUsername('admin');
+        setName('Admin Surya Kencana');
     };
 
     const handleSignOut = async () => {
-        try {
-            axios.post(
-                `${endpoint}/api/logout`,
-                {},
-                {
-                    headers: {
-                        Accept: 'application/json',
-                        Authorization: `Bearer ${token}`,
-                    },
-                }
-            );
-            navigate('/auth/boxed-signin');
-        } catch (error) {
-            toast.error('Gagal logout.');
-        }
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('id');
+        navigate('/auth/boxed-signin');
     };
 
     useEffect(() => {
