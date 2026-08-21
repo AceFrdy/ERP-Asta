@@ -66,7 +66,7 @@ const Sidebar = ({ akses }: { akses: boolean[] }) => {
                     <div className="flex justify-between items-center px-2 py-3">
                         <NavLink to="/" className="main-logo flex items-center shrink-0">
                             {/* <img className="w-8 ml-[5px] flex-none" src="/assets/images/logo.svg" alt="logo" /> */}
-                            <span className="text-2xl ltr:ml-1.5 rtl:mr-1.5 font-semibold align-middle hover:text-primary lg:inline dark:text-white-light">{t('ERP Sinar Kencana')}</span>
+                            <span className="text-2xl ltr:ml-1.5 rtl:mr-1.5 font-semibold align-middle hover:text-primary lg:inline dark:text-white-light">{t('ERP Asta')}</span>
                         </NavLink>
 
                         <button
