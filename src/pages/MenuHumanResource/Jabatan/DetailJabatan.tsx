@@ -93,7 +93,7 @@ const DetailJabatan = () => {
                 </div>
             </div>
             <div className="datatables panel xl:col-span-2">
-                <DataTable
+                <DataTable<any>
                     highlightOnHover
                     className="whitespace-nowrap table-hover"
                     records={recordsData}

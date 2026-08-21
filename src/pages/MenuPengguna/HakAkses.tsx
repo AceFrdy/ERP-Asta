@@ -307,7 +307,7 @@ const HakAkses = () => {
                                             <div className="max-h-[50dvh] overflow-y-scroll snap-y">
                                                 {dataModal === 'edit-hak-akses' && (
                                                     <div className="datatables">
-                                                        <DataTable
+                                                        <DataTable<any>
                                                             highlightOnHover
                                                             className="whitespace-nowrap table-hover"
                                                             records={menuAksesRecord}
@@ -401,7 +401,7 @@ const HakAkses = () => {
                 <div className="grid xl:grid-cols-3 gap-6 grid-cols-1 mt-2">
                     <div className="datatables panel xl:col-span-3">
                         <h5 className="font-semibold text-lg dark:text-white-light mb-2">Hak Akses</h5>
-                        <DataTable
+                        <DataTable<any>
                             highlightOnHover
                             className="whitespace-nowrap table-hover"
                             records={initialRecords}
@@ -419,8 +419,8 @@ const HakAkses = () => {
                                     render: (e) => (
                                         <div className="flex gap-2 max-w-3xl flex-wrap">
                                             {e.menu_privilages
-                                                .sort((a, b) => a.menu_id - b.menu_id)
-                                                .map((item) => (
+                                                .sort((a: any, b: any) => a.menu_id - b.menu_id)
+                                                .map((item: any) => (
                                                     <span key={item.id} className="px-3 py-0.5 bg-blue-500 rounded-md text-white">
                                                         {item.menu.menu_title}
                                                     </span>
@@ -463,7 +463,7 @@ const HakAkses = () => {
                             </button>
                         </div>
                         <div className="flex gap-5 w-full">
-                            <DataTable
+                            <DataTable<any>
                                 highlightOnHover
                                 className="whitespace-nowrap table-hover w-full"
                                 records={menuRecord}
@@ -500,7 +500,7 @@ const HakAkses = () => {
                                 ]}
                                 minHeight={200}
                             />
-                            <DataTable
+                            <DataTable<any>
                                 highlightOnHover
                                 className="whitespace-nowrap table-hover w-full"
                                 records={menuRecordSecond}

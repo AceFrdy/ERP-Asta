@@ -228,7 +228,7 @@ const DetailCabang = () => {
                     <Tab.Panels>
                         <Tab.Panel>
                             <div className="active pt-5 panel">
-                                <DataTable
+                                <DataTable<any>
                                     highlightOnHover
                                     className="whitespace-nowrap table-hover"
                                     records={penjualan}
@@ -269,7 +269,7 @@ const DetailCabang = () => {
                         <Tab.Panel>
                             <div className="grid xl:grid-cols-1 gap-6 grid-cols-1">
                                 <div className="datatables panel xl:col-span-2">
-                                    <DataTable
+                                    <DataTable<any>
                                         highlightOnHover
                                         className="whitespace-nowrap table-hover"
                                         records={stock}

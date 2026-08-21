@@ -14,6 +14,10 @@ import './i18n';
 import { RouterProvider } from 'react-router-dom';
 import router from './router/index';
 
+// Mantine styles
+import '@mantine/core/styles.css';
+import 'mantine-datatable/styles.css';
+
 // Redux
 import { Provider } from 'react-redux';
 import store from './store/index';

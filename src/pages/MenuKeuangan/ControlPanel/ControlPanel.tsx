@@ -346,7 +346,7 @@ const ControlPanel = () => {
 
                 <div className="flex flex-col-reverse xl:flex-row w-full gap-8 mt-8 h-full">
                     <div className="datatables panel w-full xl:w-2/3 h-full min-h-[400px]">
-                        <DataTable
+                        <DataTable<any>
                             highlightOnHover
                             className="whitespace-nowrap table-hover "
                             records={initialRecords}

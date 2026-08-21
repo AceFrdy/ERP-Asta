@@ -461,7 +461,7 @@ const Distribusi = () => {
                     <div className="flex md:items-center md:flex-row flex-col mb-5 gap-5"></div>
                     <h5 className="font-semibold text-lg dark:text-white-light mb-4 mt-4 flex justify-center">Data Distribusi</h5>
                     <div className="datatables">
-                        <DataTable
+                        <DataTable<any>
                             highlightOnHover
                             className="whitespace-nowrap table-hover"
                             records={initialRecords}

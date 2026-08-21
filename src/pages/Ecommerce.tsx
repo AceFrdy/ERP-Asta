@@ -326,7 +326,7 @@ const Ecommerce = () => {
                         <h5 className="font-semibold text-lg dark:text-white-light">Recent Orders</h5>
                     </div>
                     <div className="table-responsive">
-                        <DataTable
+                        <DataTable<any>
                             highlightOnHover
                             className="whitespace-nowrap table-hover"
                             records={recent}
@@ -370,7 +370,7 @@ const Ecommerce = () => {
                         <h5 className="font-semibold text-lg dark:text-white-light">Top Selling Product</h5>
                     </div>
                     <div className="table-responsive">
-                        <DataTable
+                        <DataTable<any>
                             highlightOnHover
                             className="whitespace-nowrap table-hover"
                             records={topSelling}

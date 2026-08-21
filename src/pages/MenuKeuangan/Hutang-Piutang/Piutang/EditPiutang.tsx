@@ -275,7 +275,7 @@ const EditPiutang = () => {
 
                 <h5 className="font-semibold text-lg dark:text-white-light mb-2">List Pembayaran Piutang</h5>
                 <div className="datatables">
-                    <DataTable
+                    <DataTable<any>
                         highlightOnHover
                         className="whitespace-nowrap table-hover"
                         records={initialRecords}
@@ -290,7 +290,7 @@ const EditPiutang = () => {
                             {
                                 accessor: 'action',
                                 title: 'Action',
-                                textAlignment: 'center',
+                                textAlign: 'center',
                                 render: (e) => (
                                     <div className="flex w-full justify-center">
                                         <button className="text-red-500" onClick={() => onOpen('delete-pay-piutang', e.id)}>

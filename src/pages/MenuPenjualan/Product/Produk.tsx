@@ -25,7 +25,7 @@ const Produk = () => {
     const [initialRecords, setInitialRecords] = useState<ProductList[]>([]);
     const [search, setSearch] = useState<string>('');
     const [page, setPage] = useState<string>('');
-    const [sortStatus, setSortStatus] = useState<DataTableSortStatus>({
+    const [sortStatus, setSortStatus] = useState<DataTableSortStatus<any>>({
         columnAccessor: 'id',
         direction: 'asc',
     });
@@ -126,7 +126,7 @@ const Produk = () => {
                 </div>
                 <h5 className="font-semibold text-lg dark:text-white-light mb-2">Data Produk</h5>
                 <div className="datatables">
-                    <DataTable
+                    <DataTable<any>
                         highlightOnHover
                         className="whitespace-nowrap table-hover"
                         records={initialRecords}
@@ -156,7 +156,7 @@ const Produk = () => {
                                 accessor: 'product_stock',
                                 title: 'Stok',
                                 sortable: true,
-                                render: (e) => (e.product_stock.find((item) => item.branch_id === 1)?.stock_qty ? e.product_stock.find((item) => item.branch_id === 1)?.stock_qty : '-'),
+                                render: (e) => (e.product_stock.find((item: any) => item.branch_id === 1)?.stock_qty ? e.product_stock.find((item: any) => item.branch_id === 1)?.stock_qty : '-'),
                             },
                             {
                                 accessor: 'product_price',

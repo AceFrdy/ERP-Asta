@@ -104,7 +104,7 @@ const Suplier = () => {
                 </div>
                 <h5 className="font-semibold text-lg dark:text-white-light mb-2">Supplier</h5>
                 <div className="datatables">
-                    <DataTable
+                    <DataTable<any>
                         highlightOnHover
                         className="whitespace-nowrap table-hover"
                         records={initialRecords}

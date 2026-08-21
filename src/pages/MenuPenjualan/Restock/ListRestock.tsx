@@ -126,7 +126,7 @@ const ListRestock = () => {
                 </div>
                 <h5 className="font-semibold text-lg dark:text-white-light mb-2">List Restock</h5>
                 <div className="datatables">
-                    <DataTable
+                    <DataTable<any>
                         highlightOnHover
                         className="whitespace-nowrap table-hover"
                         records={initialRecords}
@@ -143,7 +143,7 @@ const ListRestock = () => {
                                 accessor: 'items_total',
                                 title: 'Distribution Qty',
                                 sortable: true,
-                                textAlignment: 'center',
+                                textAlign: 'center',
                             },
                             { accessor: 'grand_total_price', title: 'Total', sortable: true, render: (e) => formatPrice(e.grand_total_price) },
                             {

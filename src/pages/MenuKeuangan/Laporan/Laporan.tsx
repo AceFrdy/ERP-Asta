@@ -104,7 +104,7 @@ const Laporan = () => {
                     </div>
                 </div>
                 <div className="datatables panel xl:col-span-2">
-                    <DataTable
+                    <DataTable<any>
                         highlightOnHover
                         className="whitespace-nowrap table-hover"
                         records={initialRecords}
@@ -123,13 +123,13 @@ const Laporan = () => {
                             {
                                 accessor: 'financial_statement_inflow',
                                 title: 'Uang Masuk',
-                                textAlignment: 'center',
+                                textAlign: 'center',
                                 render: (e) => <div className="text-center">{parseFloat(e.financial_statement_inflow.toString()) ? formatPrice(e.financial_statement_inflow) : '-'}</div>,
                             },
                             {
                                 accessor: 'financial_statement_outflow',
                                 title: 'Uang Keluar',
-                                textAlignment: 'center',
+                                textAlign: 'center',
                                 cellsClassName: 'flex justify-center',
                                 render: (e) => <div className="text-center">{parseFloat(e.financial_statement_outflow.toString()) ? formatPrice(e.financial_statement_outflow) : '-'}</div>,
                             },

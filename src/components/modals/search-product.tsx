@@ -36,7 +36,7 @@ const SearchProduct = () => {
                                     <input className="form-input" placeholder="Search..." onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)} value={search} autoFocus />
                                 </div>
                                 <div className="max-h-[290px] overflow-y-scroll rounded-md mt-5">
-                                    <DataTable
+                                    <DataTable<any>
                                         highlightOnHover
                                         className="whitespace-nowrap table-hover"
                                         records={

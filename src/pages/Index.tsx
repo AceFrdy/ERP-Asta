@@ -278,7 +278,7 @@ const Index = () => {
                         <h5 className="font-semibold text-lg dark:text-white-light">Recent Orders</h5>
                     </div>
                     <div className="table-responsive">
-                        <Table
+                        <Table<any>
                             highlightOnHover
                             className="whitespace-nowrap table-hover"
                             records={recent}
@@ -323,7 +323,7 @@ const Index = () => {
                         <h5 className="font-semibold text-lg dark:text-white-light">Top Selling Product</h5>
                     </div>
                     <div className="table-responsive">
-                        <Table
+                        <Table<any>
                             highlightOnHover
                             className="whitespace-nowrap table-hover"
                             records={topSelling}

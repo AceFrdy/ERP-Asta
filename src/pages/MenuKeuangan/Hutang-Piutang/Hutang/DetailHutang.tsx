@@ -154,7 +154,7 @@ const DetailHutang = () => {
 
                 <h5 className="font-semibold text-lg dark:text-white-light mt-6 mb-2">Table Hutang</h5>
                 <div className="datatables">
-                    <DataTable
+                    <DataTable<any>
                         highlightOnHover
                         className="whitespace-nowrap table-hover"
                         records={initialRecords}

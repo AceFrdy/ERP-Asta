@@ -478,7 +478,7 @@ const Penjualan = () => {
                 <div className="grid xl:grid-cols-3 gap-6 grid-cols-1 mt-8">
                     <div className="datatables panel xl:col-span-2">
                         <div>
-                            <DataTable
+                            <DataTable<any>
                                 highlightOnHover
                                 className="whitespace-nowrap table-hover"
                                 records={initialRecords}
