@@ -17,7 +17,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const [credentials, setCredentials] = useState({
-        email: 'admin@suryakencana.com',
+        email: 'admin@asta.com',
         password: 'password123',
     });
 
